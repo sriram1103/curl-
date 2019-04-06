@@ -1,0 +1,270 @@
+supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS,
+       IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET and TFTP).
+       
+       
+curl normally displays a progress meter during operations
+
+If you prefer a progress "bar" instead of the regular meter, -#, --progress-bar is your friend. You can also disable  the  progress  meter
+       completely with the -s, --silent option
+       
+The  short  "single-dash"  form  of  the options, -d for example, may be used with or without a space between it and its value, although a
+       space is a recommended separator. The long "double-dash" form, -d, --data for example, requires a space between it and its value
+       
+Short version options that don't need any additional values can be used immediately next to each other
+
+all boolean options are enabled with --option and yet again disabled with --no-option
+
+--anyauth - makes curl to decide the authentication type
+-a - append when used during upload, do not overwrite the target 
+
+--basic - basic authentication
+
+--cacert <file> - file to verify (PEM form), used to override the default file used
+--capath <dir> - directory to look for cert file (: used to provide many dirs)
+--cert-status  - verify the status of the server certificate by using the Certificate Status Request
+--cert-type <type> - PEM,DER,ENG
+-E, --cert <certificate[:password]> - TLS Certificate to use
+--ciphers <list of ciphers>  - Ciphers to use
+--compressed-ssh - (SCP SFTP) Enables built-in SSH compression
+--compressed    - (HTTP) Request a compressed response 
+-K, --config <file> - Specify file to read the curl arguments
+--connect-timeout <seconds>
+--connect-to <HOST1:PORT1:HOST2:PORT2>
+-C, --continue-at <offset>  -   Continue/Resume  a  previous file transfer at the given offset
+-c, --cookie-jar <filename> - (HTTP) Specify to which file you want curl to write all cookies after a completed operation
+-b, --cookie <data>  - (HTTP)  Pass  the  data to the HTTP server in the Cookie header.
+--create-dirs  - with the -o, --output option, curl will create the necessary local directory hierarchy as needed
+--crlf (FTP SMTP) Convert LF to CRLF in upload
+--crlfile <file> - (TLS)  Provide a file using PEM format with a Certificate Revocation List
+
+
+--data-ascii <data> - (HTTP) This is just an alias for -d, --data.
+--data-binary <data> - 
+--data-raw <data>
+--data-urlencode <data>
+-d, --data <data> (HTTP) Sends the specified data in a POST request to the HTTP server
+--delegation <LEVEL>  (GSS/kerberos) Set LEVEL to tell the server what it is allowed to delegate when it comes to user
+                        credentials
+--digest  (HTTP)  Enables  HTTP  Digest  authentication
+--disable-eprt  (FTP) Tell curl to disable the use of the EPRT and LPRT commands when doing active FTP transfers
+--disable-epsv  (FTP) (FTP) Tell curl to disable the use of the EPSV command when doing passive FTP transfer
+-q, --disable  If  used  as  the  first  parameter on the command line, the curlrc config file will not be read and used
+--dns-interface <interface> (DNS) Tell curl to send outgoing DNS requests through <interface>
+--dns-ipv4-addr <address>   (DNS) Tell curl to bind to <ip-address> when making IPv4 DNS requests
+--dns-ipv6-addr <address>
+--dns-servers <addresses>
+-D, --dump-header <filename>  (HTTP FTP) Write the received protocol headers to the specified file.
+
+
+--egd-file <file>  (TLS) Specify the path name to the Entropy Gathering Daemon socket.
+--engine <name>    (TLS)  Select  the  OpenSSL  crypto  engine to use for cipher operations
+--expect100-timeout <seconds>
+
+
+--fail-early - Fail on first error
+-f, --fail - Fail silent on server errors
+--false-start  (TLS)  Tells curl to use false start during the TLS handshake
+--form-string <name=string>
+-F, --form <name=content>
+              (HTTP SMTP IMAP) For HTTP protocol family, this lets curl emulate a filled-in form in which a user has pressed the  submit  button
+--ftp-account <data>  - (FTP) When an FTP server asks for "account data", data is sent
+--ftp-alternative-to-user <command> (FTP) If authenticating with the USER and PASS commands fails, send this command
+--ftp-create-dirs - create dirs during FTP operation
+--ftp-method <method> - singlecwd,nocwd,multicwd
+-P, --ftp-port <address>   (FTP)  Reverses  the  default  initiator/listener roles when connecting with FTP
+--ftp-pret      (FTP) Tell curl to send a PRET command before PASV (and EPSV)
+--ftp-skip-pasv-ip   (FTP)  Tell  curl  to not use the IP address
+--ftp-ssl-ccc-mode <active/passive>
+--ftp-ssl-ccc       (FTP) Use CCC (Clear Command Channel) Shuts down the SSL/TLS layer after authenticating.
+                    The rest of the control channel communication will be unencrypted. 
+                    This allows NAT routers to follow the FTP transaction. The default mode is passive
+--ftp-ssl-control   (FTP) Require SSL/TLS for the FTP login, clear for transfer
+
+
+-G, --get   When  used,  this  option will make all data specified with -d, --data, --data-binary or --data-urlencode 
+            to be used in an HTTP GET request instead of the POST request that otherwise would be used. The data will be appended to the URL with a '?' separator.
+-g, --globoff   This  option  switches  off the "URL globbing parser"            
+
+
+-I, --head  (HTTP  FTP  FILE)  Fetch the headers only!
+-H, --header <header/@file>     (HTTP) Extra header to include in the request when sending HTTP to a server
+--hostpubmd5 <md5>      (SFTP  SCP) Pass a string containing 32 hexadecimal digits
+-0, --http1.0
+--http1.1
+--http2-prior-knowledge
+--http2
+
+
+--ignore-content-length     (FTP HTTP) For HTTP, Ignore the Content-Length header
+-i, --include   Include  the  HTTP  response headers in the output
+-k, --insecure    (TLS) By default, every SSL connection curl makes is verified to be secure. 
+                  This option allows curl to proceed and operate even for server connections otherwise considered insecure
+--interface <name>  Perform an operation using a specified interface(hostname,ip,interface)
+-4, --ipv4  This option tells curl to resolve names to IPv4 addresses only
+-6, --ipv6
+
+
+-j, --junk-session-cookies  (HTTP) When curl is told to read cookies from a given file, this option will make it discard all
+                            "session cookies"
+
+                            
+--keepalive-time <seconds>
+--key-type <type>       (TLS) Private key file type
+--key <key>     (TLS  SSH)  Private  key  file  name
+--krb <level>
+
+--libcurl <file>
+              Append  this option to any ordinary curl command line, and you will get a libcurl-using C source code written to the file that does
+              the equivalent of what your command-line operation does!
+--limit-rate <speed>
+-l, --list-only
+--local-port <num/range>
+--location-trusted
+              (HTTP)  Like -L, --location, but will allow sending the name + password to all hosts that the site may redirect to
+-L, --location 
+--login-options <options>   (IMAP POP3 SMTP) Specify the login options to use during server authentication.
+
+
+--mail-auth <address>   (SMTP) Specify a single address.
+--mail-from <address>
+--mail-rcpt <address>
+-M - help text
+--max-filesize <bytes>
+--max-redirs <num>
+-m, --max-time <time>
+--metalink
+
+--negotiate
+--netrc-file <filename>
+--netrc-optional
+-n, --netrc  scan  the  .netrc file in the user's home directory for login name and password for FTP
+-:, --next  Tells  curl to use a separate operation for the following URL and associated options
+--no-alpn   (HTTPS)  Disable  the  ALPN  TLS extension
+-N, --no-buffer     Disables the buffering of the output stream
+--no-keepalive      Disables the use of keepalive messages on the TCP connection
+--no-npn            (HTTPS) Disable the NPN TLS extension
+--no-sessionid      (TLS)  Disable  curl's  use  of SSL session-ID caching
+--noproxy <no-proxy-list>   Comma-separated  list  of  hosts  which  do not use a proxy, if one is specified
+--ntlm-wb       (HTTP)  Enables  NTLM  much  in the style --ntlm does
+--ntlm
+
+
+--oauth2-bearer <token>     (IMAP POP3 SMTP) Specify the Bearer Token for OAUTH 2.0 server authentication
+-o, --output <file>
+
+
+--pass <phrase>         (SSH TLS) Passphrase for the private key
+--path-as-is
+--pinnedpubkey <hashes>
+--post301
+--post302
+--post303
+--preproxy [protocol://]host[:port] Use  the  specified  SOCKS proxy before connecting to an HTTP or HTTPS -x, --proxy.
+-#, --progress-bar
+--proto-default <protocol>
+--proto-redir <protocols>
+--proto <protocols>
+
+--proxy-anyauth
+--proxy-basic
+--proxy-cacert <file>
+--proxy-capath <dir>
+--proxy-cert-type <type>
+--proxy-cert <cert[:passwd]>
+--proxy-ciphers <list>
+--proxy-crlfile <file>
+--proxy-digest
+--proxy-header <header/@file>
+--proxy-insecure
+--proxy-key-type <type>
+--proxy-key <type>
+--proxy-negotiate
+--proxy-ntlm
+--proxy-pass <phrase>
+--proxy-service-name <name>
+--proxy-ssl-allow-beast
+--proxy-tlsauthtype <type>
+--proxy-tlspassword <string>
+--proxy-tlsuser <name>
+--proxy-tlsv1
+-U, --proxy-user <user:password>
+-x, --proxy [protocol://]host[:port]
+--proxy1.0 <host[:port]>
+-p, --proxytunnel
+--pubkey <key>
+
+
+
+-Q, --quote
+
+--random-file <file>    Specify the path name to file containing what will be considered as random data
+-r, --range <range>     (HTTP FTP SFTP FILE) Retrieve a byte range
+--raw  (HTTP) When used, it disables all internal HTTP decoding of content or transfer encodings
+-e, --referer <URL>     (HTTP)  Sends  the "Referrer Page" information to the HTTP server
+-J, --remote-header-name
+--remote-name-all
+-O, --remote-name
+-R, --remote-time
+--request-target
+-X, --request <command>
+--resolve <host:port:address>
+--retry-connrefused
+--retry-delay <seconds>
+--retry-max-time <seconds>
+--retry <num>
+
+
+--sasl-ir
+--service-name <name>
+-S, --show-error
+-s, --silent
+--socks4 <host[:port]>
+--socks4a <host[:port]>
+--socks5-basic
+--socks5-gssapi-nec
+--socks5-gssapi-service <name>
+--socks5-gssapi
+--socks5-hostname <host[:port]>
+--socks5 <host[:port]>
+-Y, --speed-limit <speed>
+-y, --speed-time <seconds>
+     --ssl           Try SSL/TLS
+     --ssl-allow-beast Allow security flaw to improve interop
+     --ssl-no-revoke Disable cert revocation checks (WinSSL)
+     --ssl-reqd      Require SSL/TLS
+ -2, --sslv2         Use SSLv2
+ -3, --sslv3         Use SSLv3
+     --stderr        Where to redirect stderr
+     --suppress-connect-headers Suppress proxy CONNECT response headers
+     --tcp-fastopen  Use TCP Fast Open
+     --tcp-nodelay   Use the TCP_NODELAY option
+ -t, --telnet-option <opt=val> Set telnet option
+     --tftp-blksize <value> Set TFTP BLKSIZE option
+     --tftp-no-options Do not send any TFTP options
+ -z, --time-cond <time> Transfer based on a time condition
+     --tls-max <VERSION> Use TLSv1.0 or greater
+     --tlsauthtype <type> TLS authentication type
+     --tlspassword   TLS password
+     --tlsuser <name> TLS user name
+ -1, --tlsv1         Use TLSv1.0 or greater
+     --tlsv1.0       Use TLSv1.0
+     --tlsv1.1       Use TLSv1.1
+     --tlsv1.2       Use TLSv1.2
+     --tlsv1.3       Use TLSv1.3
+     --tr-encoding   Request compressed transfer encoding
+     --trace <file>  Write a debug trace to FILE
+     --trace-ascii <file> Like --trace, but without hex output
+     --trace-time    Add time stamps to trace/verbose output
+     --unix-socket <path> Connect through this Unix domain socket
+ -T, --upload-file <file> Transfer local FILE to destination
+     --url <url>     URL to work with
+ -B, --use-ascii     Use ASCII/text transfer
+ -u, --user <user:password> Server user and password
+ -A, --user-agent <name> Send User-Agent <name> to server
+ -v, --verbose       Make the operation more talkative
+ -V, --version       Show version number and quit
+ -w, --write-out <format> Use output FORMAT after completion
+     --xattr         Store metadata in extended file attributes
+
+
+
